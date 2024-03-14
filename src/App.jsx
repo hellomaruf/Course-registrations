@@ -1,10 +1,14 @@
+import { useState } from "react";
 import Courses from "./components/courses/Courses";
 import Selectcart from "./components/selectedcart/Selectcart";
 
 function App() {
-  const handleSelectBtn = () => {
-    console.log('select');
-  }
+  const [selectCarts, setSelectCarts] = useState([]);
+  const handleSelectBtn = (course) => {
+    let newSelectCarts = [...selectCarts, course];
+    setSelectCarts(newSelectCarts);
+  };
+
   return (
     <>
       <div className="max-w-7xl mx-auto">
@@ -13,10 +17,10 @@ function App() {
         </h1>
         <div className="grid grid-cols-12 gap-4">
           <div className=" col-span-9">
-            <Courses />
+            <Courses handleSelectBtn={handleSelectBtn} />
           </div>
           <div className=" col-span-3">
-            <Selectcart />
+            <Selectcart selectCarts={selectCarts} />
           </div>
         </div>
       </div>

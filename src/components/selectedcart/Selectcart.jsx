@@ -1,9 +1,9 @@
-function Selectcart() {
+function Selectcart({ selectCarts }) {
   return (
     <div>
       <div className="bg-white p-5 rounded-lg w-full shadow-md">
         <h2 className="text-blue-500 font-bold text-xl">
-          Credit Hour Remaining :
+          Credit Hour Remaining :{selectCarts.length}
         </h2>
         <hr className="my-3" />
         <h2 className="font-bold text-lg">Course Name </h2>

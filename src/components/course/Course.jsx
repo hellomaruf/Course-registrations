@@ -1,6 +1,5 @@
-function Course({ courses }) {
+function Course({ courses, handleSelectBtn }) {
   const { name, credit, price, description, photo } = courses;
-  console.log(name);
   return (
     <div className="">
       <div className="card bg-white shadow-md">
@@ -19,7 +18,10 @@ function Course({ courses }) {
             </div>
           </div>
           <div className="card-actions">
-            <button className="btn bg-blue-500 text-white w-full hover:bg-blue-600">
+            <button
+              onClick={()=>handleSelectBtn(courses)}
+              className="btn bg-blue-500 text-white w-full hover:bg-blue-600"
+            >
               Select
             </button>
           </div>
