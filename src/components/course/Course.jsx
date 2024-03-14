@@ -1,19 +1,27 @@
-function Course() {
+function Course({ courses }) {
+  const { name, credit, price, description, photo } = courses;
+  console.log(name);
   return (
-    <div>
-      <div className="card bg-base-100 shadow-xl">
-        <figure className="px-10 pt-10">
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-            className="rounded-xl"
-          />
+    <div className="">
+      <div className="card bg-gray-100 shadow-md">
+        <figure className="px-4 pt-4">
+          <img src={photo} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div className="card-body items-center text-center">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div className="card-body  ">
+          <h2 className="font-extrabold ">{name}</h2>
+          <p className=" text-base">{description}</p>
+          <div className="flex justify-between py-2">
+            <div className="flex gap-2 text-lg font-medium text-gray-500">
+              <i className="ri-money-dollar-circle-line"></i>Price:{price}
+            </div>
+            <div className=" flex gap-2 text-lg font-medium text-gray-500">
+              <i className="ri-book-open-line"></i>Credit:{credit}
+            </div>
+          </div>
           <div className="card-actions">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn bg-blue-500 text-white w-full hover:bg-blue-600">
+              Select
+            </button>
           </div>
         </div>
       </div>

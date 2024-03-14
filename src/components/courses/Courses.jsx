@@ -14,10 +14,12 @@ function Courses() {
   }, []);
   console.log(course);
   return (
-    <div>
-      {course.map((items, index) => (
-        <Course key={index} />
-      ))}
+    <div className="">
+      <div className="grid grid-cols-3 gap-6">
+        {course.map((items, index) => (
+          <Course courses={items} key={index} />
+        ))}
+      </div>
     </div>
   );
 }
