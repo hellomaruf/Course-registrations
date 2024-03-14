@@ -3,13 +3,13 @@ function Course({ courses }) {
   console.log(name);
   return (
     <div className="">
-      <div className="card bg-gray-100 shadow-md">
+      <div className="card bg-white shadow-md">
         <figure className="px-4 pt-4">
           <img src={photo} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div className="card-body  ">
+        <div className="px-4 py-6">
           <h2 className="font-extrabold ">{name}</h2>
-          <p className=" text-base">{description}</p>
+          <p className=" text-base py-2">{description}</p>
           <div className="flex justify-between py-2">
             <div className="flex gap-2 text-lg font-medium text-gray-500">
               <i className="ri-money-dollar-circle-line"></i>Price:{price}
